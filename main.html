@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>Agency Manager</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	</style>
+	<script type="text/javascript" src="start.js"></script>
+	<script type="text/javascript" src="sites.js"></script>
+	<script type="text/javascript" src="anomalies.js"></script>
+
+</head>
+
+<body>
+
+<div id="sidebar">
+	<h1 style="line-height: 24px">Agency Manager</h1>
+	<hr>
+	<br><a href="#">PLAY</a>
+	<br><a href="#">STATISTICS</a>
+	<br><a href="#">SETTINGS</a>
+</div>
+
+<div id="content-wrap">
+	<div class="contentPanel" id="sites">
+		
+		<button onclick="siteCreate();">Create Site</button>&emsp;<h2 style="display: inline">Sites</h2>&emsp;<button onclick="siteDelete();">Destroy Site</button>
+		<br><br>
+		<table id="siteTable">
+			<tr>
+				<th>Site Designation</th>
+				<th>Date Created</th>
+				<th>Location</th>
+				<th>Anomalies Contained</th>
+			</tr>
+		</table>
+	</div>
+	<div class="contentPanel" id="anomalies">
+    <button onclick="transferAnomaly();">Transfer Anomaly</button>&emsp;<h2 style="display: inline;">Anomalies</h2>&emsp;<button>Neutralize Anomaly</button>
+		<br><br>
+		<table id="anomTable">
+			<tr>
+				<th>Anomaly Designation</th>
+				<th>Date Discovered</th>
+				<th>Object Class</th>
+				<th>Contained At</th>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+html, body {
+	background: radial-gradient(#203f70, #152a4c);
+	height: 100%;
+	color: #eee;
+	font-family: Roboto, Arial, sans-serif;
+	overflow: hidden;
+}
+
+#sidebar {
+	background: #1a1a1a;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	padding: 1%;
+	width: 10%;
+	text-align: center;
+	z-index: 2;
+	box-shadow: 3px 0px 20px #0a0a0a;
+}
+
+#sidebar a {
+	text-decoration: none;
+	font-size: 24px;
+	color: #eee;
+	transition: all 0.2s ease;
+	transform: scale(1);
+	display: block;
+}
+
+#content-wrap {
+	width: 90%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.popin {
+	animation: popin 0.2s ease-out;
+}
+
+@keyframes popin {
+	from {opacity: 0; transform:scale(0.5);}
+	to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.contentPanel {
+	background: #0f203d;
+	position: fixed;
+	padding: 1%;
+	text-align: center;
+  z-index: 0;
+}
+
+#sites {
+	top: 4%;
+	left: 16%;
+	width: 35%;
+}
+
+#anomalies {
+	top: 4%; 
+	right: 6%;
+	width: 35%;
+}
+
+#siteTable, #anomTable {
+	border-collapse: collapse;
+	width: 100%;
+  table-layout: fixed;
+}
+
+tbody {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+#siteTable th, td, #anomTable th, td {
+	border: 1px solid #eee;
+	padding: 1%;
+  word-wrap: break-word;
+}
+
+#infoView {
+	animation: fadein 1s ease-out;
+}
+
+#focusBox {
+  text-align: center; 
+	margin: 23% auto 50% auto; 
+	font-size: 25px;
+	padding: 3%;
+	background-color: rgba(14, 28, 51, 0.8);
+	border: 1px solid rgba(14, 28, 51, 0.9);
+	width: fit-content;
+	max-width: 35%;
+  position: relative;
+	z-index: 2;
+}
